@@ -1,20 +1,31 @@
 function Header() {
   return (
-    <div className="flex w-full my-3">
-      <h2 className="text-left text-2xl font-bold w-full ml-80 my-3">
-        My Tinerary
-      </h2>
-      <div className="flex w-full justify-end my-3 mr-80">
+    <div className="flex justify-between w-[1291px] h-[64px] mt-[32px] ml-[219px]">
+      <div className="w-[937px] h-[64px]">
+        <h2 className="w-[183px] h-[43px] font-[700] text-[32px] leading[42.56px]">
+          My Tinerary
+        </h2>
+      </div>
+      <div className="flex w-[354px] h-[64px]">
+        <a
+          className="w-[69px] h-[64px] font-[700] text-[24px] mt-[10px] mr-[25px]"
+          href="#"
+        >
+          Home
+        </a>
+        <a
+          className="w-[69px] h-[64px] font-[700] text-[24px] mt-[10px] mr-[25px]"
+          href="#"
+        >
+          Cities
+        </a>
 
-        <a className="m-3 font-bold text-2xl" href="#">Home</a>
-        <a className="m-3 font-bold text-2xl" href="#">Cities</a>
-
-        <button className="text-xl mx-4 bg-indigo-600 text-gray-50 texto-lg px-8 py-4 rounded-lg flex font-bold">
+        <button className="font-bold bg-indigo-600 text-gray-50 text-lg rounded-lg inline-block w-[159px] h-[64px] gap-[10px] py-4 px-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-5 h-5 m-1"
+            className="w-[21px] h-[20px] inline-block mr-[5px]"
           >
             <path
               fillRule="evenodd"

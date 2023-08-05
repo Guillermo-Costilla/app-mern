@@ -7,19 +7,19 @@ function App() {
   return (
     <>
       <Main>
-        <div className="flex justify-center w-full h-full">
-          <div className="ml-40 w-1/2 gap-10 mt-56 flex flex-col items-start">
-            <h1 className="text-5xl font-bold my-1 text-left">
+        <div className="h-auto flex justify-between mt-[314px] ml-[219px] w-[1291px] h-[304px]">
+          <div className="w-[742px] h-[304] gap-10">
+            <h1 className="text-[48px] h-[64px] font-bold leading-[63.84px] w-[700px] mb-[35px]">
               Find the perfect destination
             </h1>
-            <p className="w-3/5 text-2xl text-left">
+            <p className="text-[24px] font-semibold leading-[31.92px] w-[628px] h-[96px] mb-[35px]">
               Our app will help you find the perfect path for your next trip.
               With an easy-to-use interface and a host of itinerary options,
               planning your next trip has never been easier.
             </p>
-            <button className="mt-1 text-center text-xl bg-indigo-600 text-gray-50 texto-lg px-8 py-4 w-48 rounded-lg font-bold">View More</button>
+            <button className="text-2xl rounded-lg py-4 px-5 w-[346px] h-[64] gap-4 bg-indigo-600 text-white font-semibold">View More</button>
           </div>
-          <div className="mr-44 mt-64">
+          <div className="">
             <img className="h-52 w-78" src={Img} />
           </div>
         </div>
