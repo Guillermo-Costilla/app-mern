@@ -1,10 +1,13 @@
-import Header from "../components/Header";
+import SideBar from "../components/SideBar";
+import Footer from "../components/Footer";
+import { Outlet } from "react-router-dom";
 
-const main = ({ children }) => {
+const main = () => {
     return (
         <>
-            <Header />
-            {children}
+            <SideBar />
+            <Outlet />
+            <Footer />
         </>
     )
 }
