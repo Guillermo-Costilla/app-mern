@@ -5,8 +5,8 @@ const SideBar = () => {
     const [open, setOpen] = useState(false)
 
     const Links = [
-        { title: 'Home', to: '/' },
-        { title: 'Cities', to: '/cities' }
+        { title: 'Home', to: '/', id: '1' },
+        { title: 'Cities', to: '/cities', id: '2' }
     ]
 
     return (
@@ -16,7 +16,7 @@ const SideBar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
-            <h2 className='mx-auto text-center py-0 text-4xl font-bold h-6 text-white'>My Tinerary</h2>
+            <h2 className='mx-auto text-center py-0 text-4xl font-bold h-6 text-white cursor-pointer'>My Tinerary</h2>
             <div className={`${!open && 'hidden'} bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm`} onClick={() => setOpen(false)}>
                 <div className={`${open ? 'w-80' : 'w-0'} min-h-screen w-80 fixed top-0 left-0 transition-all duration-300`}>
                     <div className={`${!open && 'hidden'} pt-3`}>
@@ -42,7 +42,7 @@ const SideBar = () => {
                                 Login
                             </button>
                         </div>
-                        {Links.map((link) => <Link className='w-full justify-center hover:bg-blue-950 flex flex-cols font-bold text-white text-xl m-4 p-2 rounded-lg' key={link.title} to={link.to}>{link.title}</Link>)}
+                        {Links.map((link) => <Link className='w-full justify-center hover:bg-blue-950 flex flex-cols font-bold text-white text-xl m-4 p-2 rounded-lg' key={link.id} to={link.to}>{link.title}</Link>)}
                     </div>
                 </div>
             </div>
