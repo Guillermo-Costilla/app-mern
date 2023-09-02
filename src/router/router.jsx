@@ -17,13 +17,13 @@ const router = createBrowserRouter([
                 path: '/cities',
                 element: <Cities />
             },
-            {
-                path: '/cities/:id',
-                element: <CityDetails />
-            }
+
         ]
     },
     {
+
+        path: '/cities/:id',
+        element: <CityDetails />
 
     }
 ])

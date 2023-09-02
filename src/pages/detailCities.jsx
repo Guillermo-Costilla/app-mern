@@ -16,7 +16,7 @@ const CityDetails = () => {
     return (
         <div>
             {city && (
-                <CardDetail city={city.city} country={city.country} image={city.image} description={city.description} />
+                <CardDetail {...city} itineraries={city.itineraries} />
             )}
         </div>
     );
