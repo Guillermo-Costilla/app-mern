@@ -3,7 +3,7 @@ import '../styles/itinerary.css'
 function Comments({ comments }) {
 
     return (
-        <div className='card mt-2 mb-5'>
+        <div className='card mt-2 mb-5 w-full'>
             <h2 className='w-full text-sky-500 font-semibold text-2xl text-center my-5'>The best comments about the city:</h2>
             <div>
                 <div className='w-full flex mb-4'>
