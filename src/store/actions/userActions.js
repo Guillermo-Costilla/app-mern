@@ -46,13 +46,14 @@ export const user_signup = createAsyncThunk('user_signup', async (obj) => {
     try {
         const { data } = await axios.post('http://localhost:5000/api/auth/signup', obj.data);
         console.log(data)
-        const { user, token } = data.response;
         Swal.fire({
             title: '¡Success!',
-            text: 'User created! You can now log in!',
+            text: data.message + ' You can now log in!',
             icon: 'success',
             confirmButtonText: 'Lets Go!'
           })
+        const { user, token } = data.response;
+        
 
         return { user, token };
 
