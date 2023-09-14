@@ -8,6 +8,8 @@ import Googlesignin from "../components/googlesignin.jsx";
 
 export const SignIn = () => {
 
+    const links = { title: 'Back', to: '/', id: 1 }
+
     const dispatch = useDispatch();
 
     const [formData, setFormData] = useState({
@@ -85,8 +87,10 @@ export const SignIn = () => {
                     </form>
 
                     <hr className="my-6 border-gray-300 w-full" />
-
-                    <Googlesignin onClick={handleSigInGoogle} />
+                    <div className="flex">
+                        <Googlesignin onClick={handleSigInGoogle} />
+                        <button className='ml-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' ><Link to={links.to} id={links.id} >{links.title}</Link></button>
+                    </div>
 
                     <p className="my-8 text-slate-400">Need an account? <Link key={Links.id} to={'/signup'} className="text-blue-500 hover:text-blue-700 font-semibold" > Create an
                         account </Link></p>
