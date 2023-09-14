@@ -3,9 +3,12 @@ import { useState } from 'react'
 import CountryDropdown from '../components/Dropdown.jsx'
 import { useDispatch } from 'react-redux'
 import { user_signup } from '../store/actions/userActions'
+import { Link } from 'react-router-dom';
 
 
 export const SignUp = () => {
+
+    const links = { title: 'Sign in', to: '/signin', id: 2 }
 
     const countrys = ["Argentina", "EEUU", "France", "England", "Italy", "Germany", "Colombia", "China", "Brazil"]
 
@@ -39,7 +42,7 @@ export const SignUp = () => {
 
 
     return (
-        <div className='w-full h-screen flex justify-center items-center'>
+        <div className='w-full h-screen flex flex-col justify-center items-center'>
             <div className='w-full h-full flex flex-col justify-center items-center'>
                 <form onSubmit={handleSignUp} className='w-1/2 p-6 card'>
                     <h2 className='text-white font-bold text-3xl w-full text-center'>Sign up</h2>
@@ -65,7 +68,10 @@ export const SignUp = () => {
                         <CountryDropdown countrys={countrys} onChange={handleInput} />
                     </div>
                     <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                    <button className='ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' ><Link to={links.to} id={links.id} >{links.title}</Link></button>
                 </form>
+            </div>
+            <div>
             </div>
         </div>
 

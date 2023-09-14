@@ -10,9 +10,9 @@ function Itinerary({ user, duration, price, likes, hashtags }) {
 
             <h2 className='w-full text-white text-2xl text-center my-3 font-bold'>Fun day in the City</h2>
 
-            <div className='flex flex-1 w-full sm:max-md:flex-col'>
+            <div className='flex flex-1 w-full'>
 
-                <div className="flex flex-col w-2/6 items-end">
+                <div className="flex flex-col w-2/6 items-end sm:max-lg:ml-2">
                     <img className="h-[150px] w-[150px] ml-3 rounded-full mb-1 object-cover" src={user.photo} alt={user.name} />
                     <p className="text-white text-xl font-bold mb-4 ml-7 mb-3">{user.name}</p>
                 </div>
