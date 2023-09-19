@@ -1,9 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
+import apiUrl from "../../api";
 
 export const get_cities = createAsyncThunk('get_cities', async() => {
     try {
-       const response = await axios.get('http://localhost:5000/api/cities')
+       const response = await axios.get(`${apiUrl}cities`)
        
         return {
             cities: response.data.cities
@@ -16,7 +17,7 @@ export const get_cities = createAsyncThunk('get_cities', async() => {
 
 export const filter_cities = createAsyncThunk('filter_cities', async(obj) => {
     try {
-       const response = await axios.get(`http://localhost:5000/api/cities?city=${obj.name}`)
+       const response = await axios.get(`${apiUrl}cities?city=${obj.name}`)
 
         return {
             cities: response.data.cities

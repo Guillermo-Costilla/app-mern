@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useRef } from 'react'
 import { google_login } from '../store/actions/userActions'
 import { useDispatch } from 'react-redux'
+import apiUrl from '../api'
 
 const googlesignin = ({ onClick }) => {
 
@@ -13,7 +14,7 @@ const googlesignin = ({ onClick }) => {
         const body = {
             token_id: response.credential
         }
-        const { data } = await axios.post('http://localhost:5000/api/auth/google', body)
+        const { data } = await axios.post(`${apiUrl}auth/google`, body)
 
         dispatch(google_login(data))
     }

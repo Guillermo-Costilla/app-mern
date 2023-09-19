@@ -1,6 +1,7 @@
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import Swal from 'sweetalert2'
+import apiUrl from "../../api";
 
 
 
@@ -13,7 +14,7 @@ export const user_image = createAction('user_image', (obj) => {
 })
 export const user_login = createAsyncThunk('user_login', async (obj) => {
     try {
-        const { data } = await axios.post('http://localhost:5000/api/auth/signin', obj.data)
+        const { data } = await axios.post(`${apiUrl}auth/signin`, obj.data)
             localStorage.setItem('token', data.response.token)
             localStorage.setItem('user', JSON.stringify(data.response.user))
 
@@ -44,7 +45,7 @@ export const user_login = createAsyncThunk('user_login', async (obj) => {
 })
 export const user_signup = createAsyncThunk('user_signup', async (obj) => {
     try {
-        const { data } = await axios.post('http://localhost:5000/api/auth/signup', obj.data);
+        const { data } = await axios.post(`${apiUrl}auth/signup`, obj.data);
         console.log(data)
         Swal.fire({
             title: '¡Success!',
@@ -73,7 +74,7 @@ export const user_logout = createAsyncThunk('user_logout', async() => {
     try {
         const token = localStorage.getItem('token')
         const config = {headers: {'Authorization': `Bearer ${token}`}}
-        const response = await axios.post('http://localhost:5000/api/auth/signout', null, config);
+        const response = await axios.post(`${apiUrl}auth/signout`, null, config);
         localStorage.removeItem('token');
         localStorage.removeItem('user');
 
