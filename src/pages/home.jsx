@@ -6,7 +6,7 @@ import '../styles/itinerary.css'
 const Home = () => {
 
     const images = [
-        '../../public/Austria.jpg',
+        'https://drive.google.com/file/d/1-gdp33HZHHBF7kDtNMnX9bOC_nP91kPY/view',
         '../../public/Canada.jpg',
         '../../public/España.jpg',
         '../../public/EstadosUnidos.jpg',

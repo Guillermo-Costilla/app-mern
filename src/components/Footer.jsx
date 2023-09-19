@@ -5,7 +5,7 @@ export default function Footer() {
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <a href="#" className="flex items-center mb-4 sm:mb-0">
-                        <img src="https://w7.pngwing.com/pngs/361/470/png-transparent-airplane-fly-flight-airline-ticket-airplane-blue-angle-logo.png" className="h-8 mr-3" alt="Avion Logo" />
+                        <img src="https://w7.pngwing.com/pngs/386/732/png-transparent-airplane-aircraft-logo-airplane-blue-logo-airplane-thumbnail.png" className="h-8 mr-3" alt="Avion Logo" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">My Tinerary</span>
                     </a>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
