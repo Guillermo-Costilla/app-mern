@@ -4,22 +4,6 @@ import '../styles/itinerary.css'
 
 
 const Home = () => {
-
-    const images = [
-        'https://drive.google.com/file/d/1-gdp33HZHHBF7kDtNMnX9bOC_nP91kPY/view',
-        '../../public/Canada.jpg',
-        '../../public/España.jpg',
-        '../../public/EstadosUnidos.jpg',
-        '../../public/Francia.jpg',
-        '../../public/Islandia.jpg',
-        '../../public/Italia.jpg',
-        '../../public/Japon.jpeg',
-        '../../public/Noruega.jpg',
-        '../../public/NuevaZelanda.jpg',
-        '../../public/Sudafrica.jpg',
-        '../../public/Suiza.jpg'
-    ];
-
     const Links =
         { title: 'View More Cities', to: '/cities', id: '2' }
 
@@ -33,7 +17,7 @@ const Home = () => {
             </div>
             <div className="mt-36 mx-auto w-1/2 sm:max-lg:w-full sm:max-lg:mb-40">
                 <h3 className="text-white text-2xl font-bold text-center mb-2">Popular Mytineraries</h3>
-                <Carousel images={images} />
+                <Carousel />
             </div>
         </div>
     )
