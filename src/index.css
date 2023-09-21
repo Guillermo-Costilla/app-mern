@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  background-image: url("../public/icon/fondo2.0.jpg");
+  background-image: url("./images/icon/fondo2.0.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -15,15 +15,14 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-  
 }
 
 body::-webkit-scrollbar {
   width: 10px;
-  background: rgba(255,255,255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background: rgb(67 56 202);
   border-radius: 5px;
 }

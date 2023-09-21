@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { user_logout } from '../store/actions/userActions.js'
 import { Link } from 'react-router-dom'
+import defaultImage from '../images/icon/icono-PhotoRoom.png-PhotoRoom.png'
 
 
 
 const SideBar = () => {
     const [open, setOpen] = useState(false)
-    const defaultPhoto = '../../public/icon/icono-PhotoRoom.png-PhotoRoom.png';
+    const defaultPhoto = defaultImage
     const defaultName = null
 
     const user = useSelector(store => store.userReducer.user);

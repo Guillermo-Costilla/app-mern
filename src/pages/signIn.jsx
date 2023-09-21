@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import '../styles/itinerary.css'
 import Googlesignin from "../components/googlesignin.jsx";
+import passaport from '../images/icon/pngwing.com.png'
 
 
 export const SignIn = () => {
@@ -60,7 +61,7 @@ export const SignIn = () => {
 
                 <div className="w-full h-100">
                     <div className="flex justify-center items-center">
-                        <img src="../../public/icon/pngwing.com.png" alt="" className="w-[400px] h-[200px] mt-10" />
+                        <img src={passaport} alt="Passaport" className="w-[400px] h-[200px] mt-10" />
                     </div>
 
                     <div>
