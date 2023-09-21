@@ -6,9 +6,6 @@ import '../styles/itinerary.css'
 
 
 const Home = () => {
-
-    console.log('hola')
-
     const Links =
         { title: 'View More Cities', to: '/cities', id: '2' }
 
