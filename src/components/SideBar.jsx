@@ -42,7 +42,7 @@ const SideBar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
-            <h2 className='mx-auto text-center py-0 text-4xl font-bold h-6 text-white cursor-pointer'>My Tinerary</h2>
+            <h2 className='mx-auto text-center py-0 text-xl md:text-4xl font-bold h-6 text-white cursor-pointer'>My Tinerary</h2>
 
             <div className='flex items-center'>
                 <img

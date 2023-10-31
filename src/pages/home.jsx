@@ -11,14 +11,14 @@ const Home = () => {
 
 
     return (
-        <div className="flex flex-grow sm:max-lg:flex-col sm:max-lg:w-full mb-32">
-            <div className="mx-auto w-1/2 sm:max-lg:w-full">
-                <h2 className='text-3xl font-bold mt-36 ml-12 w-11/12 text-white'>Find your perfect trip, designed by insiders who know and love their cities!</h2>
-                <p className='texl-2xl m-12 w-3/5 text-white'>Our app will help you find the perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has never been easier.</p>
-                <Link key={Links.id} to={Links.to}><button className='text-white px-4 py-2 text-2xl font-bold ml-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl duration-300 boton z-10'>{Links.title}</button></Link>
+        <div className="md:flex flex-1 flex-col sm:max-lg:w-full">
+            <div className="w-full px-3">
+                <h2 className='text-3xl font-bold mt-10 md:mt-36 mx-auto md:ml-12 w-11/12 text-white'>Find your perfect trip, designed by insiders who know and love their cities!</h2>
+                <p className='texl-2xl mx-auto my-10 md:m-12 w-11/12  text-white'>Our app will help you find the perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has never been easier.</p>
+                <Link key={Links.id} to={Links.to}><button className='text-white px-4 ml-4 w-11/12 py-2 text-xl md:text-2xl font-bold mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl duration-300 boton z-10'>{Links.title}</button></Link>
             </div>
-            <div className="mt-36 mx-auto w-1/2 flex flex-col justify-center items-center  sm:max-lg:w-full sm:max-lg:mb-40">
-                <h3 className="text-white text-2xl font-bold text-center mb-2">Popular Mytineraries</h3>
+            <div className="mt-36 mx-auto md:w-1/2 flex flex-col justify-center items-center w-full sm:max-lg:mb-40">
+                <h3 className="text-white text-2xl font-bold text-center mb-10 md:mb-2">Popular Mytineraries</h3>
                 <Carousel />
             </div>
         </div>
