@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  color: rgb(34 211 238);
+}
+
 html {
   background-image: url("./images/icon/fondo2.0.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   margin: 0;
   padding: 0;
 }

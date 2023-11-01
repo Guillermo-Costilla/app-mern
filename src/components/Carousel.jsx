@@ -83,7 +83,7 @@ const Carousel = () => {
                         data-te-carousel-item
                         data-te-carousel-active={index === currentIndex}
                     >
-                        <img src={image.src} className="block w-full bg-cover bg-center rounded-xl  h-[300px] md:h-[600px]" alt={image.title} />
+                        <img src={image.src} className="block w-full bg-cover bg-center rounded-xl h-[300px] md:h-[400px] lg:h-[600px]" alt={image.title} />
                     </div>
                 ))}
             </div>
