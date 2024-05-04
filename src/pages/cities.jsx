@@ -24,10 +24,10 @@ export const Cities = () => {
     };
 
     return (
-        <div className='w-full flex grow flex-col min-h-screen'>
+        <div className='w-full flex grow flex-col min-h-screen bg-cover bg-no-repeat bg-center' style={{ backgroundImage: "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", height: 'max-content' }}>
             <section className='my-10 w-full'>
-                <h2 className='text-4xl my-4 text-center font-bold'>Cities</h2>
-                <p className='text-2xl my-4 text-center'>Collection of the most beautiful places and experiences</p>
+                <h2 className='text-4xl my-4 text-center font-bold text-gray-600'>Cities</h2>
+                <p className='text-2xl my-4 text-center text-gray-600'>Collection of the most beautiful places and experiences</p>
             </section>
             <div className='w-full flex m-auto justify-center'>
                 <input name='input_search' ref={inputSearch} className='border-2 border-gray-700 rounded-md py-1 px-2 w-1/2' type="text" placeholder='Search cities' />
