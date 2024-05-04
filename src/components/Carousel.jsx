@@ -52,7 +52,7 @@ const Carousel = () => {
     };
 
     return (
-        <div id="carouselExampleCrossfade" className="relative w-full h-[300px] md:h-auto p-4 md:w-5/6" data-te-carousel-init data-te-ride="carousel">
+        <div id="carouselExampleCrossfade" className="relative w-full h-[300px] md:h-[500px] p-4 md:w-[600px]" data-te-carousel-init data-te-ride="carousel">
 
             <div className="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0" data-te-carousel-indicators>
                 {images.map((_, index) => (
@@ -83,7 +83,7 @@ const Carousel = () => {
                         data-te-carousel-item
                         data-te-carousel-active={index === currentIndex}
                     >
-                        <img src={image.src} className="block w-full bg-cover bg-center rounded-xl h-[300px] md:h-[400px] lg:h-[600px]" alt={image.title} />
+                        <img src={image.src} className="block w-full bg-cover bg-center rounded-xl h-[300px] md:h-[400px] lg:h-[400px]" alt={image.title} />
                     </div>
                 ))}
             </div>
