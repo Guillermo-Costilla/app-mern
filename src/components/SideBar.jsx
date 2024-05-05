@@ -45,7 +45,7 @@ const SideBar = () => {
             <h2 className='mx-auto text-center py-0 text-xl md:text-4xl font-bold h-6 w-[60%] cursor-pointer text-gray-200'>My Tinerary</h2>
 
             {/* Información del usuario */}
-            <div className='md:flex md:items-center md:px-7 w-[20%]'>
+            <div className='lg:flex md:items-center md:px-7 w-[20%]'>
                 <img
                     className='rounded-full h-[50px] w-[50px] md:h-[90px] md:w-[90px] mx-auto md:ml-0 xl:ml-10 object-cover' src={user ? user.image : defaultPhoto}
                     alt="default photo"
@@ -69,7 +69,7 @@ const SideBar = () => {
                             <Link className='bg-inherit w-full justify-center hover:bg-blue-950 flex flex-cols font-bold text-xl m-4 p-2 rounded-lg text-gray-200' key={link.id} to={link.to}>{link.title}</Link>
                         ))}
                         {/* Botón para logout */}
-                        {user && <button onClick={handleLogout} className={`bg-inherit w-full justify-center hover:bg-blue-950 flex flex-cols font-bold text-xl m-4 p-2 rounded-lg`}><Link to={logout.to} id={logout.id}>{logout.title}</Link></button>}
+                        {user && <button onClick={handleLogout} className={`bg-inherit w-full justify-center hover:bg-blue-950 flex flex-cols font-bold text-xl m-4 p-2 rounded-lg text-gray-200`}><Link to={logout.to} id={logout.id}>{logout.title}</Link></button>}
                     </div>
                 </div>
             </div>

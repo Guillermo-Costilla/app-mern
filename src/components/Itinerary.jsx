@@ -8,7 +8,7 @@ function Itinerary({ user, duration, price, likes, hashtags }) {
     return (
         <div className="flex flex-col justify-center items-center w-full card mb-5 ">
 
-            <h2 className='w-full text-2xl text-center my-3 font-bold'>Fun day in the City</h2>
+            <h2 className='w-full text-2xl text-center my-3 font-bold text-gray-200'>Fun day in the City</h2>
 
             <div className='flex flex-col lg:flex-row lg:flex-1 w-full'>
 
