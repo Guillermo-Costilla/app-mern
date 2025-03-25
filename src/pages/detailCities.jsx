@@ -14,6 +14,8 @@ const CityDetails = () => {
             .catch(error => console.log(error));
     }, [id]);
 
+
+
     return (
         <div>
             {city && (

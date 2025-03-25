@@ -23,3 +23,7 @@ body::-webkit-scrollbar-thumb {
   background: rgb(67 56 202);
   border-radius: 5px;
 }
+
+:root {
+  color-scheme: light dark;
+}

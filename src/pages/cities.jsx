@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { filter_cities, get_cities } from '../store/actions/cityActions.js';
 import Card from '../components/Card.jsx';
-import city from '../images/City.jpg';
+
 
 export const Cities = () => {
 
@@ -25,10 +25,10 @@ export const Cities = () => {
     };
 
     return (
-        <div className='w-full flex grow flex-col bg- min-h-screen bg-cyan-400'>
+        <div className='w-full flex grow flex-col bg- min-h-screen'>
             <section className='my-10 w-full'>
-                <h2 className='text-4xl my-4 text-center font-bold text-gray-600'>Cities</h2>
-                <p className='text-2xl my-4 text-center text-gray-600'>Collection of the most beautiful places and experiences</p>
+                <h2 className='text-4xl my-4 text-center font-bold text-slate-200'>Cities</h2>
+                <p className='text-2xl my-4 text-center text-slate-200'>Collection of the most beautiful places and experiences</p>
             </section>
             <div className='w-full flex m-auto justify-center'>
                 <input name='input_search' ref={inputSearch} className='border-2 border-gray-700 rounded-md py-1 px-2 w-1/2' type="text" placeholder='Search cities' />

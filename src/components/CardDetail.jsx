@@ -1,25 +1,13 @@
-import { Link } from 'react-router-dom';
 import Itinerary from './Itinerary.jsx';
 import Activity from './Activity.jsx';
 import Comments from './Comments.jsx';
+import PropTypes from 'prop-types'
 
 export default function CardDetail({ city, image, country, description, itineraries, activities }) {
-    const Links =
-        [{ title: 'Back Cities', to: '/cities', id: '2' }, { title: 'Back Home', to: '/', id: '1' }]
-        ;
+
 
     return (
-        <div className='flex mt-10 flex-col lg:flex-row justify-center items-center w-full bg-cyan-400'>
-            <div className='w-20 relative sm:max-lg:mb-5 mx-auto'>
-                <div className='flex flex-row justify-center sm:max-lg:mt-2 lg:justify-left lg:flex-col mb-10 w-10'>
-                    <Link key={Links[0].id} to={Links[0].to}>
-                        <button className='p-2 text-xl font-bold transition ease-in-out delay-130 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl duration-200 boton text-gray-200'>{Links[0].title}</button>
-                    </Link>
-                    <Link key={Links[1].id} to={Links[1].to}>
-                        <button className='lg:mt-4 sm:max-lg:mt-0 ml-4 lg:ml-0  p-2 text-xl font-bold transition ease-in-out delay-130 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-xl duration-200 boton text-gray-200'>{Links[1].title}</button>
-                    </Link>
-                </div>
-            </div>
+        <div className='flex mt-10 flex-col lg:flex-row justify-center items-center w-full'>
             <div className='flex flex-col justify-center w-11/12 md:w-5/6 gap-4 rounded-lg lg:mr-20'>
                 <div className='relative h-[600px] sm:max-md:h-[800px] sm:max-md:w-full rounded-3xl w-full'>
                     <img className='w-full h-full rounded-3xl' src={image} alt={`${city}, ${country}`} />
@@ -37,4 +25,13 @@ export default function CardDetail({ city, image, country, description, itinerar
             </div>
         </div>
     );
+}
+
+CardDetail.propTypes = {
+    city: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    itineraries: PropTypes.arrayOf(PropTypes.object).isRequired,
+    activities: PropTypes.arrayOf(PropTypes.object).isRequired
 }
