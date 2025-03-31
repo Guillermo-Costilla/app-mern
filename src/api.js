@@ -1,16 +1,8 @@
 import axios from 'axios';
 
 let apiUrl = axios.create({
-  baseURL: 'http://localhost:4000/api' // Cambia por tu URL
+  baseURL: `${import.meta.env.VITE_APP_BACK_URL}/api/`
 });
-
-// Cambia la baseURL si está en modo producción
-if (import.meta.env.MODE === 'production') {
-  apiUrl = axios.create({
-    baseURL: `${import.meta.env.VITE_APP_BACK_URL}/api`
-  });
-}
-console.log(import.meta.env.VITE_APP_BACK_URL)
 
 // Lista de endpoints que no requieren autenticación
 const publicEndpoints = ['cities', 'auth/signin', 'auth/signup', '']; // Agrega tus endpoints públicos aquí

@@ -1,30 +1,41 @@
 import { RouterProvider } from "react-router-dom";
 import router from './router/router';
 import { useEffect } from "react";
-import axios from "axios";
 import { useDispatch } from "react-redux";
 import { user_token } from "./store/actions/userActions";
 import apiUrl from "./api";
 
-
 function App() {
-
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let url = `${apiUrl}auth/token`
-    let token = localStorage.getItem('token')
+    const token = localStorage.getItem('token');
     if (token) {
-      let headers = { headers: { 'Authorization': `Bearer ${token}` } }
-      axios.post(url, null, headers)
-        .then(response => dispatch(user_token(response.data.user)))
-        .catch(err => console.log(err))
+      apiUrl.post('auth/token')
+        .then(response => {
+          console.log("Respuesta del token:", response.data);
+          dispatch(user_token(response.data.user));
+        })
+        .catch(err => {
+          console.log("Error verificando token:", err);
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+        });
+    } else {
+      const storedUser = localStorage.getItem('user');
+      if (storedUser) {
+        try {
+          const user = JSON.parse(storedUser);
+          dispatch(user_token(user));
+        } catch (error) {
+          console.error('Error parsing stored user:', error);
+          localStorage.removeItem('user');
+        }
+      }
     }
-  }, [])
-
+  }, [dispatch]);
 
   return (
-
     <RouterProvider router={router} />
   );
 }

@@ -35,12 +35,12 @@ const MyCities = () => {
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className='w-full flex grow flex-col md:flex-row min-h-screen'>
+        <div className='w-full flex grow flex-col min-h-screen'>
             <section className='my-10 w-full'>
                 <h2 className='text-4xl my-4 text-center font-bold text-slate-200'>Mis Ciudades</h2>
                 <p className='text-2xl my-4 text-center text-slate-200'>Aquí están las ciudades que has creado</p>
             </section>
-            <div className='flex flex-1 flex-wrap mx-auto items-center justify-center text-center w-[90%] md:w-1/2 lg:w-full'>
+            <div className='flex flex-1 flex-wrap mx-auto items-center justify-center text-center w-[90%] md:w-1/2'>
                 {
                     userCities?.length > 0
                         ? userCities.map((city) => (

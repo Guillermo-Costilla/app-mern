@@ -25,7 +25,7 @@ export const Cities = () => {
     };
 
     return (
-        <div className='w-full flex grow flex-col bg- min-h-screen'>
+        <div className='w-full flex grow flex-col min-h-screen'>
             <section className='my-10 w-full'>
                 <h2 className='text-4xl my-4 text-center font-bold text-slate-200'>Cities</h2>
                 <p className='text-2xl my-4 text-center text-slate-200'>Collection of the most beautiful places and experiences</p>
