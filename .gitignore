@@ -1,3 +1,5 @@
+.env
+
 # Logs
 logs
 *.log
@@ -7,6 +9,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+.env
 node_modules
 *.local
 
@@ -20,3 +23,4 @@ node_modules
 *.njsproj
 *.sln
 *.sw?
+.env
