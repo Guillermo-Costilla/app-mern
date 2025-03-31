@@ -54,7 +54,7 @@ export const SignIn = () => {
     const Links = { title: "Register Now", to: "/signup", id: "7" };
 
     return (
-        <section className="flex flex-col md:flex-row md:flex-1 h-screen items-center">
+        <section className="flex flex-col md:flex-row md:flex-1 h-screen items-center min-h-screen w-full">
 
             <div className="card w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 px-6 lg:px-16 xl:px-12
         flex items-center justify-center">
@@ -88,7 +88,7 @@ export const SignIn = () => {
                     </form>
 
                     <hr className="my-6 border-gray-300 w-full" />
-                    <div className="flex">
+                    <div className="flex bg-transparent">
                         <Googlesignin onClick={handleSigInGoogle} />
                         <button className='ml-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' ><Link to={links.to} id={links.id} >{links.title}</Link></button>
                     </div>

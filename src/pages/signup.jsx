@@ -44,7 +44,7 @@ export const SignUp = () => {
     return (
         <div className='w-full h-screen flex flex-col justify-center items-center'>
             <div className='w-full h-full flex flex-col justify-center items-center'>
-                <form onSubmit={handleSignUp} className='w-1/2 p-6 card'>
+                <form onSubmit={handleSignUp} className='w-5/6 md:w-1/2 p-6 card gap-2'>
                     <h2 className='text-white font-bold text-3xl w-full text-center'>Sign up</h2>
                     <div className="relative z-0 w-full mb-6 group">
                         <input onChange={handleInput} type="email" name="email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
@@ -67,8 +67,10 @@ export const SignUp = () => {
                         <h1 className='text-gray-400 mb-1'>Select your country:</h1>
                         <CountryDropdown countrys={countrys} onChange={handleInput} />
                     </div>
-                    <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                    <button className='ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' ><Link to={links.to} id={links.id} >{links.title}</Link></button>
+                    <div className='flex flex-col md:flex-row gap-2'>
+                        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                        <button className='sd:ml-4 mt-4 md:mt-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' ><Link to={links.to} id={links.id} >{links.title}</Link></button>
+                    </div>
                 </form>
             </div>
             <div>

@@ -33,7 +33,7 @@ const googlesignin = ({ onClick }) => {
     }, [])
 
     return (
-        <div onClick={onClick} ref={googleButton}></div>
+        <div onClick={onClick} ref={googleButton} className='bg-transparent'></div>
     )
 }
 

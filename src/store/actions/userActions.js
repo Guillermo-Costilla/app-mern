@@ -1,5 +1,4 @@
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 import Swal from 'sweetalert2'
 import apiUrl from "../../api";
 
@@ -14,20 +13,21 @@ export const user_image = createAction('user_image', (obj) => {
 })
 export const user_login = createAsyncThunk('user_login', async (obj) => {
     try {
-        const { data } = await axios.post(`${apiUrl}auth/signin`, obj.data)
-            localStorage.setItem('token', data.response.token)
-            localStorage.setItem('user', JSON.stringify(data.response.user))
+        const { data } = await apiUrl.post('auth/signin', obj.data)
+        localStorage.setItem('token', data.response.token)
+        localStorage.setItem('user', JSON.stringify(data.response.user))
 
-
-            Swal.fire({
-                title: '¡Success!',
-                text: '¡Welcome ' + data.response.user.name+' ! ',
-                icon: 'success',
-                confirmButtonText: 'Lets Go!'
-              })
+        Swal.fire({
+            title: '¡Success!',
+            text: '¡Welcome ' + data.response.user.name + ' ! ',
+            icon: 'success',
+            confirmButtonText: 'Lets Go!'
+        })
 
         return {
-            user: data.response.user
+            user: data.response.user,
+            userId: data.response.userId,
+            token: data.response.token
         }
     } catch (error) {
         console.log(error)
@@ -45,7 +45,7 @@ export const user_login = createAsyncThunk('user_login', async (obj) => {
 })
 export const user_signup = createAsyncThunk('user_signup', async (obj) => {
     try {
-        const { data } = await axios.post(`${apiUrl}auth/signup`, obj.data);
+        const { data } = await apiUrl.post('auth/signup', obj.data);
         console.log(data)
         Swal.fire({
             title: '¡Success!',
@@ -73,11 +73,25 @@ export const user_signup = createAsyncThunk('user_signup', async (obj) => {
 export const user_logout = createAsyncThunk('user_logout', async() => {
     try {
         const token = localStorage.getItem('token')
+        const user = JSON.parse(localStorage.getItem('user'))
+        
+        if (!token) {
+            // Si no hay token, simplemente limpiamos el localStorage
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            return {
+                token: null,
+                user: null
+            }
+        }
+        
         const config = {headers: {'Authorization': `Bearer ${token}`}}
-        const response = await axios.post(`${apiUrl}auth/signout`, null, config);
+        // Incluir datos del usuario en el cuerpo de la petición
+        const userData = { email: user.email }
+        
+        const response = await apiUrl.post('auth/signout', userData, config);
         localStorage.removeItem('token');
         localStorage.removeItem('user');
-
 
         return {
             token: null,
@@ -85,7 +99,14 @@ export const user_logout = createAsyncThunk('user_logout', async() => {
         }
     } catch (error) {
         console.log(error)
-        throw error;
+        // Aún si hay error, limpiamos el localStorage
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        
+        return {
+            token: null,
+            user: null
+        }
     }
 
 })

@@ -9,9 +9,11 @@ html {
 }
 
 body {
-  background-color: rgb(31 41 55);
-  position: relative;
-  min-height: 100vh;
+  background-image: url("/images/fondo2.0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body::-webkit-scrollbar {
@@ -22,8 +24,4 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: rgb(67 56 202);
   border-radius: 5px;
-}
-
-:root {
-  color-scheme: light dark;
 }

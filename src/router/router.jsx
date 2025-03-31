@@ -6,6 +6,8 @@ import CityDetails from '../pages/detailCities';
 import SignIn from '../pages/signIn';
 import SignUp from '../pages/signup';
 import ProtectedRoute from './ProtectedRoute';
+import CreateCity from '../pages/CreateCity';
+import MyCities from '../pages/MyCities';
 
 const router = createBrowserRouter([
     {
@@ -19,7 +21,10 @@ const router = createBrowserRouter([
             {
                 path: '/cities',
                 element: <Cities />
-
+            },
+            {
+                path: '/my-cities',
+                element: <MyCities />
             },
             {
                 path: '/cities/:id',
@@ -39,8 +44,11 @@ const router = createBrowserRouter([
     }, {
         path: '/signup',
         element: <SignUp />
+    },
+    {
+        path: '/create-city',
+        element: <CreateCity />
     }
-
 ])
 
 export default router;
