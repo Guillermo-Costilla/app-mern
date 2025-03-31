@@ -31,7 +31,7 @@ const MyCities = () => {
     console.log('Esta son las ciudades:', cities)
     console.log('Este es el user ID:', userId)
 
-    if (loading) return <div>Cargando ciudades...</div>;
+    if (loading) return <div>Loading cities...</div>;
     if (error) return <div>Error: {error}</div>;
 
     return (
