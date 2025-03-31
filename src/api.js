@@ -7,7 +7,7 @@ let apiUrl = axios.create({
 // Cambia la baseURL si está en modo producción
 if (import.meta.env.MODE === 'production') {
   apiUrl = axios.create({
-    baseURL: `${import.meta.env.VITE_APP_BACK_URL}/api/`
+    baseURL: import.meta.env.VITE_APP_BACK_URL
   });
 }
 
